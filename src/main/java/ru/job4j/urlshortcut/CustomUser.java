@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.User;
 import java.util.Collection;
 
 /**
- *  Class-helper used for encapsulating id of Site.
+ *  Class-helper used for encapsulating Site id.
  *
  *  @author AndrewMs
  *  @version 1.0

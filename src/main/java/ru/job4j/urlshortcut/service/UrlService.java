@@ -58,9 +58,7 @@ public class UrlService {
             var url = urls.findByShortcut(shortcut);
             if (url.isPresent()) {
                 res = url.get().getUrl();
-                Statistics stat = url.get().getStat();
-                stat.incrementCount();
-                stats.save(stat);
+                stats.incrementCounterById(url.get().getStat().getId());
             }
         } catch (Exception e) {
             LOG.error("exception:", e);

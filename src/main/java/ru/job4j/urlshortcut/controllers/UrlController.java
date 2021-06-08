@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 /**
  * Class serves POST-requests for URL registration (converting)
- * and GET-requests for shortcut-based redirection.
+ * and GET-requests for shortcut-based redirection and statistics retrieving.
  *
  * @author AndrewMs
  * @version 1.0

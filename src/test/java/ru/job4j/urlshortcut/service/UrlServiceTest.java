@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import ru.job4j.urlshortcut.models.Site;
 import ru.job4j.urlshortcut.models.Statistics;
@@ -19,6 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.anyInt;
 
 @SpringBootTest(classes = UrlService.class)
 class UrlServiceTest {
@@ -70,7 +72,8 @@ class UrlServiceTest {
         String shortcut = "shortcut";
         Url url = new Url(shortcut, "url", null, Mockito.mock(Statistics.class));
         Mockito.when(urls.findByShortcut(any())).thenReturn(Optional.of(url));
-        Mockito.when(stats.save(any())).thenThrow(DataIntegrityViolationException.class);
+        Mockito.doThrow(new DataIntegrityViolationException(""))
+                .when(stats).incrementCounterById(anyInt());
         UrlService service = new UrlService(urls, stats);
         String result = service.getUrl(shortcut);
         assertThat(result.length(), is(0));
