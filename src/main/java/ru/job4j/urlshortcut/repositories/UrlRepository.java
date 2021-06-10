@@ -11,6 +11,6 @@ import java.util.Optional;
 public interface UrlRepository extends CrudRepository<Url, Integer> {
     Optional<Url> findByShortcut(String shortcut);
 
-    @Query("select u from Url u join fetch u.stat")
+    @Query("select u from Url u join fetch u.stat where u.site = ?1")
     List<Url> findAllBySite(Site site);
 }

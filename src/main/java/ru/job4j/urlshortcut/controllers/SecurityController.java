@@ -16,7 +16,7 @@ import java.util.Map;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 /**
- * Class serves POST-requests for registration and authorization.
+ * Class handles registration and authorization POST-requests.
  *
  * @author AndrewMs
  * @version 1.0

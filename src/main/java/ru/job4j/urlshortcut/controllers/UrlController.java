@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 /**
- * Class serves POST-requests for URL registration (converting)
- * and GET-requests for shortcut-based redirection and statistics retrieving.
+ * Class handles URL registration POST-requests
+ * and shortcut-based redirection/statistics retrieving GET-requests.
  *
  * @author AndrewMs
  * @version 1.0
