@@ -13,14 +13,14 @@ This project demonstrates the principles of the following technologies:
 - Codecov  
 
 URLShortcut allows reducing URLs into short codes.       
-The service collects request statistics.  
+The service collects and provides request statistics.  
  
 ### Features  
-- Site registration   
-- Site authentication and token-based authorization     
+- Site registration  
+- Site authentication and token-based authorization  
 - URL's shortcut generation  
 - Redirecting by shortcut  
-- Providing statistics of the URLs redirections    
+- Providing statistics of the URLs redirections  
 
 ### Basic diagram of the app  
 ![ScreenShot](img/app_diagram.png)
@@ -77,7 +77,7 @@ HTTP/1.1 200
 Authorization: Bearer eyJ0eXAiOIU(...)x7MxYofyzESVew  
 ```
 
-#### 3. URL registration (shortcuts generation)      
+#### 3. URL registration        
 
 _Request_:
 ```
