@@ -1,8 +1,9 @@
 # UrlShortcut 
 [![Build Status](https://travis-ci.com/amasterenko/job4j_url_shortcut.svg?branch=master)](https://travis-ci.com/amasterenko/job4j_url_shortcut) [![codecov](https://codecov.io/gh/amasterenko/job4j_url_shortcut/branch/master/graph/badge.svg?token=HB2S7GPVQ2)](https://codecov.io/gh/amasterenko/job4j_url_shortcut)  
 
+The app reduces URLs into short codes, performs code-based redirection,
+collects and provides request statistics.  
 
----  
 This project demonstrates the principles of the following technologies:
 - Spring Boot (Web, Data, Security, Test)  
 - REST API  
@@ -12,15 +13,12 @@ This project demonstrates the principles of the following technologies:
 - Travis C.I.  
 - Codecov  
 
-URLShortcut allows reducing URLs into short codes.       
-The service collects and provides request statistics.  
- 
 ### Features  
 - Site registration  
 - Site authentication and token-based authorization  
-- URL's shortcut generation  
-- Redirecting by shortcut  
-- Providing statistics of the URLs redirections  
+- Unique URL shortcut generation    
+- Redirection by shortcut  
+- Statistics of the URLs redirections  
 
 ### Basic diagram of the app  
 ![ScreenShot](img/app_diagram.png)
